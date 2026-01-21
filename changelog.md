@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: terms
 title: 변경 이력
 ---
 
