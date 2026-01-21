@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - AIDEN Terms</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+      background: #0d0d0d;
+      color: #00ff41;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      padding: 40px;
+      border: 1px solid #00ff41;
+      box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    }
+    
+    .header {
+      border-bottom: 2px solid #00ff41;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .version-badge {
+      background: #003d1a;
+      color: #00ff41;
+      padding: 5px 15px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    
+    h1 {
+      color: #00ff41;
+      margin: 15px 0;
+      font-size: 2em;
+      text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    }
+    
+    .meta {
+      color: #00cc33;
+      font-size: 0.9em;
+    }
+    
+    .critical-warning {
+      background: #330000;
+      border-left: 4px solid #ff0000;
+      padding: 15px;
+      margin: 20px 0;
+      color: #ff6666;
+    }
+    
+    h2 {
+      color: #00ff41;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    a {
+      color: #00ccff;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid #00ff41;
+      margin: 30px 0;
+      opacity: 0.3;
+    }
+    
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #00ff41;
+      text-align: center;
+      font-size: 0.8em;
+      color: #00cc33;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="version-badge">VERSION {{ page.version }}</span>
+      <h1>AIDEN Terms of Service</h1>
+      <p class="meta">시행일: {{ page.effective_date }}</p>
+    </div>
+    
+    {% if page.critical_changes %}
+    <div class="critical-warning">
+      ⚠️ 중대 변경사항: 본 업데이트는 사용자 권리에 중대한 변경을 포함합니다.
+    </div>
+    {% endif %}
+    
+    <div class="content">
+      {{ content }}
+    </div>
+    
+   <div class="footer">
+  <p><a href="{{ site.baseurl }}/">← 최신 약관으로 돌아가기</a> | <a href="{{ site.baseurl }}/changelog">변경 이력 보기</a></p>
+  <p>AIDEN Corp. © 2026-2027 | 이 문서는 소설 속 가상의 서비스입니다.</p>
+    </div>
+  </div>
+</body>
+</html>

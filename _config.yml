@@ -1,0 +1,21 @@
+title: AIDEN Terms of Service
+description: 에이든 서비스 이용약관 - 공식 문서 아카이브
+baseurl: "/aiden-terms"
+url: "https://jayjeonghokim.github.io"
+
+# Collections 설정
+collections:
+  terms:
+    output: true
+    permalink: /terms/:name/
+    sort_by: version
+
+# 기본 설정
+markdown: kramdown
+theme: minima
+
+# 제외할 파일
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
